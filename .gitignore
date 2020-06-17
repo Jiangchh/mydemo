@@ -1,0 +1,11 @@
+target/
+.project
+.settings/
+.classpath
+.DS_Store
+.idea/
+*.iml
+*.eml
+*.o
+*.pyc
+.clover/
