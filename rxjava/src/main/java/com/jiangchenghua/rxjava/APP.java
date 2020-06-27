@@ -1,9 +1,19 @@
 package com.jiangchenghua.rxjava;
 
+import io.reactivex.Observable;
 import io.reactivex.rxjava3.core.Flowable;
+
+import java.util.Arrays;
+import java.util.List;
+import hu.akarnokd.rxjava2.math.MathObservable;
+import hu.akarnokd.rxjava2.math.MathFlowable;
+import io.reactivex.rxjava3.parallel.ParallelFlowable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class APP {
     public static void main(String[] args) {
-        Flowable.fromArray(args).subscribe(s -> System.out.println("Hello " + s + "!"));
+        ParallelFlowable<Integer> source = Flowable.range(1, 1000).parallel();
+        ParallelFlowable<Integer> psource = source.runOn(Schedulers.io());
+        Flowable<Integer> result = psource.filter(v -> v % 3 == 0).map(v -> v * v).sequential();
     }
 }
