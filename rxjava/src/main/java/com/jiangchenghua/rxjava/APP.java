@@ -1,12 +1,6 @@
 package com.jiangchenghua.rxjava;
 
-import io.reactivex.Observable;
 import io.reactivex.rxjava3.core.Flowable;
-
-import java.util.Arrays;
-import java.util.List;
-import hu.akarnokd.rxjava2.math.MathObservable;
-import hu.akarnokd.rxjava2.math.MathFlowable;
 import io.reactivex.rxjava3.parallel.ParallelFlowable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
