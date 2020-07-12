@@ -14,6 +14,8 @@
         <module>guava</module>
         <module>hystrix</module>
         <module>rxjava</module>
+        <module>netty</module>
+      <module>zookeeper</module>
 
     </modules>
 
