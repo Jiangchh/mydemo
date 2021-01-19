@@ -16,6 +16,7 @@
         <module>rxjava</module>
         <module>netty</module>
       <module>zookeeper</module>
+        <module>thread</module>
 
     </modules>
 
